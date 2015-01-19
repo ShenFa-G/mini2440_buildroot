@@ -1,0 +1,2 @@
+#!/bin/sh
+PKG_CONFIG_LIBDIR=${PKG_CONFIG_LIBDIR:-/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/pkgconfig:/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/share/pkgconfig} PKG_CONFIG_SYSROOT_DIR=${PKG_CONFIG_SYSROOT_DIR:-/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot} $(dirname $0)/pkgconf  $@

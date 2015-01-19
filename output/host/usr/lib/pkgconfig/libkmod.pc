@@ -1,0 +1,11 @@
+prefix=/home/ssbai/mini2440_buildroot/output/host/usr
+exec_prefix=/home/ssbai/mini2440_buildroot/output/host/usr
+libdir=/home/ssbai/mini2440_buildroot/output/host/usr/lib
+includedir=/home/ssbai/mini2440_buildroot/output/host/usr/include
+
+Name: libkmod
+Description: Library to deal with kernel modules
+Version: 18
+Libs: -L${libdir} -lkmod
+Libs.private:  
+Cflags: -I${includedir}

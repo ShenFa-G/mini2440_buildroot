@@ -1,0 +1,192 @@
+1421375588:start:extract             : toolchain-external
+1421375588:end  :extract             : toolchain-external
+1421375588:start:patch               : toolchain-external
+1421375588:end  :patch               : toolchain-external
+1421375588:start:configure           : toolchain-external
+1421375590:end  :configure           : toolchain-external
+1421375590:start:build               : toolchain-external
+1421375590:end  :build               : toolchain-external
+1421375590:start:install-staging     : toolchain-external
+1421375607:end  :install-staging     : toolchain-external
+1421375607:start:install-target      : toolchain-external
+1421375607:end  :install-target      : toolchain-external
+1421375607:start:extract             : toolchain
+1421375607:end  :extract             : toolchain
+1421375607:start:patch               : toolchain
+1421375608:end  :patch               : toolchain
+1421375608:start:configure           : toolchain
+1421375608:end  :configure           : toolchain
+1421375608:start:build               : toolchain
+1421375608:end  :build               : toolchain
+1421375608:start:install-target      : toolchain
+1421375608:end  :install-target      : toolchain
+1421375608:start:extract             : busybox
+1421375608:end  :extract             : busybox
+1421375608:start:patch               : busybox
+1421375608:end  :patch               : busybox
+1421375614:start:configure           : busybox
+1421375614:end  :configure           : busybox
+1421375614:start:build               : busybox
+1421375682:end  :build               : busybox
+1421375682:start:install-target      : busybox
+1421375685:end  :install-target      : busybox
+1421375685:start:extract             : uboot
+1421375690:end  :extract             : uboot
+1421375690:start:patch               : uboot
+1421375690:end  :patch               : uboot
+1421375690:start:configure           : uboot
+1421375691:end  :configure           : uboot
+1421375691:start:build               : uboot
+1421375724:end  :build               : uboot
+1421375724:start:install-target      : uboot
+1421375724:end  :install-target      : uboot
+1421375724:start:install-image       : uboot
+1421375724:end  :install-image       : uboot
+1421375724:start:extract             : host-libtool
+1421375724:end  :extract             : host-libtool
+1421375724:start:patch               : host-libtool
+1421375724:end  :patch               : host-libtool
+1421375724:start:configure           : host-libtool
+1421375731:end  :configure           : host-libtool
+1421375731:start:build               : host-libtool
+1421375733:end  :build               : host-libtool
+1421375733:start:install-host        : host-libtool
+1421375733:end  :install-host        : host-libtool
+1421375733:start:extract             : host-m4
+1421375734:end  :extract             : host-m4
+1421375734:start:patch               : host-m4
+1421375735:end  :patch               : host-m4
+1421375735:start:configure           : host-m4
+1421375757:end  :configure           : host-m4
+1421375757:start:build               : host-m4
+1421375764:end  :build               : host-m4
+1421375764:start:install-host        : host-m4
+1421375764:end  :install-host        : host-m4
+1421375764:start:extract             : host-autoconf
+1421375764:end  :extract             : host-autoconf
+1421375764:start:patch               : host-autoconf
+1421375764:end  :patch               : host-autoconf
+1421375764:start:configure           : host-autoconf
+1421375766:end  :configure           : host-autoconf
+1421375766:start:build               : host-autoconf
+1421375767:end  :build               : host-autoconf
+1421375767:start:install-host        : host-autoconf
+1421375768:end  :install-host        : host-autoconf
+1421375768:start:extract             : host-automake
+1421375768:end  :extract             : host-automake
+1421375768:start:patch               : host-automake
+1421375768:end  :patch               : host-automake
+1421375768:start:configure           : host-automake
+1421375769:end  :configure           : host-automake
+1421375769:start:build               : host-automake
+1421375770:end  :build               : host-automake
+1421375770:start:install-host        : host-automake
+1421375770:end  :install-host        : host-automake
+1421375770:start:extract             : host-pkgconf
+1421375770:end  :extract             : host-pkgconf
+1421375770:start:patch               : host-pkgconf
+1421375770:end  :patch               : host-pkgconf
+1421375770:start:configure           : host-pkgconf
+1421375771:end  :configure           : host-pkgconf
+1421375771:start:build               : host-pkgconf
+1421375773:end  :build               : host-pkgconf
+1421375773:start:install-host        : host-pkgconf
+1421375773:end  :install-host        : host-pkgconf
+1421375773:start:extract             : host-kmod
+1421375773:end  :extract             : host-kmod
+1421375773:start:patch               : host-kmod
+1421375773:end  :patch               : host-kmod
+1421375773:start:configure           : host-kmod
+1421375785:end  :configure           : host-kmod
+1421375785:start:build               : host-kmod
+1421375789:end  :build               : host-kmod
+1421375789:start:install-host        : host-kmod
+1421375789:end  :install-host        : host-kmod
+1421375789:start:extract             : host-lzo
+1421375789:end  :extract             : host-lzo
+1421375789:start:patch               : host-lzo
+1421375790:end  :patch               : host-lzo
+1421375790:start:configure           : host-lzo
+1421375802:end  :configure           : host-lzo
+1421375802:start:build               : host-lzo
+1421375812:end  :build               : host-lzo
+1421375812:start:install-host        : host-lzo
+1421375813:end  :install-host        : host-lzo
+1421375813:start:extract             : host-lzop
+1421375813:end  :extract             : host-lzop
+1421375813:start:patch               : host-lzop
+1421375813:end  :patch               : host-lzop
+1421375813:start:configure           : host-lzop
+1421375821:end  :configure           : host-lzop
+1421375821:start:build               : host-lzop
+1421375823:end  :build               : host-lzop
+1421375823:start:install-host        : host-lzop
+1421375823:end  :install-host        : host-lzop
+1421375823:start:extract             : host-uboot-tools
+1421375829:end  :extract             : host-uboot-tools
+1421375829:start:patch               : host-uboot-tools
+1421375829:end  :patch               : host-uboot-tools
+1421375829:start:configure           : host-uboot-tools
+1421375829:end  :configure           : host-uboot-tools
+1421375829:start:build               : host-uboot-tools
+1421375833:end  :build               : host-uboot-tools
+1421375833:start:install-host        : host-uboot-tools
+1421375833:end  :install-host        : host-uboot-tools
+1421375923:start:configure           : linux
+1421375935:end  :configure           : linux
+1421375935:start:build               : linux
+1421376874:end  :build               : linux
+1421376876:start:install-target      : linux
+1421376881:end  :install-target      : linux
+1421376881:start:install-image       : linux
+1421376881:end  :install-image       : linux
+1421376883:start:extract             : host-e2fsprogs
+1421376883:end  :extract             : host-e2fsprogs
+1421376883:start:patch               : host-e2fsprogs
+1421376883:end  :patch               : host-e2fsprogs
+1421376883:start:configure           : host-e2fsprogs
+1421376901:end  :configure           : host-e2fsprogs
+1421376901:start:build               : host-e2fsprogs
+1421376930:end  :build               : host-e2fsprogs
+1421376931:start:install-host        : host-e2fsprogs
+1421376932:end  :install-host        : host-e2fsprogs
+1421376932:start:extract             : host-zlib
+1421376932:end  :extract             : host-zlib
+1421376932:start:patch               : host-zlib
+1421376932:end  :patch               : host-zlib
+1421376932:start:configure           : host-zlib
+1421376932:end  :configure           : host-zlib
+1421376932:start:build               : host-zlib
+1421376938:end  :build               : host-zlib
+1421376938:start:install-host        : host-zlib
+1421376938:end  :install-host        : host-zlib
+1421376938:start:extract             : host-mtd
+1421376938:end  :extract             : host-mtd
+1421376938:start:patch               : host-mtd
+1421376938:end  :patch               : host-mtd
+1421376938:start:configure           : host-mtd
+1421376938:end  :configure           : host-mtd
+1421376938:start:build               : host-mtd
+1421376949:end  :build               : host-mtd
+1421376949:start:install-host        : host-mtd
+1421376950:end  :install-host        : host-mtd
+1421376950:start:extract             : host-fakeroot
+1421376950:end  :extract             : host-fakeroot
+1421376950:start:patch               : host-fakeroot
+1421376950:end  :patch               : host-fakeroot
+1421376950:start:configure           : host-fakeroot
+1421376957:end  :configure           : host-fakeroot
+1421376957:start:build               : host-fakeroot
+1421376959:end  :build               : host-fakeroot
+1421376959:start:install-host        : host-fakeroot
+1421376959:end  :install-host        : host-fakeroot
+1421376959:start:extract             : host-makedevs
+1421376959:end  :extract             : host-makedevs
+1421376959:start:patch               : host-makedevs
+1421376959:end  :patch               : host-makedevs
+1421376959:start:configure           : host-makedevs
+1421376959:end  :configure           : host-makedevs
+1421376959:start:build               : host-makedevs
+1421376959:end  :build               : host-makedevs
+1421376959:start:install-host        : host-makedevs
+1421376959:end  :install-host        : host-makedevs

@@ -1,0 +1,189 @@
+kernel/fs/nls/nls_cp437.ko:
+kernel/fs/nls/nls_cp737.ko:
+kernel/fs/nls/nls_cp775.ko:
+kernel/fs/nls/nls_cp850.ko:
+kernel/fs/nls/nls_cp852.ko:
+kernel/fs/nls/nls_cp855.ko:
+kernel/fs/nls/nls_cp857.ko:
+kernel/fs/nls/nls_cp860.ko:
+kernel/fs/nls/nls_cp861.ko:
+kernel/fs/nls/nls_cp862.ko:
+kernel/fs/nls/nls_cp863.ko:
+kernel/fs/nls/nls_cp864.ko:
+kernel/fs/nls/nls_cp865.ko:
+kernel/fs/nls/nls_cp866.ko:
+kernel/fs/nls/nls_cp869.ko:
+kernel/fs/nls/nls_cp874.ko:
+kernel/fs/nls/nls_cp932.ko:
+kernel/fs/nls/nls_euc-jp.ko:
+kernel/fs/nls/nls_cp936.ko:
+kernel/fs/nls/nls_cp949.ko:
+kernel/fs/nls/nls_cp950.ko:
+kernel/fs/nls/nls_cp1250.ko:
+kernel/fs/nls/nls_cp1251.ko:
+kernel/fs/nls/nls_ascii.ko:
+kernel/fs/nls/nls_iso8859-1.ko:
+kernel/fs/nls/nls_iso8859-2.ko:
+kernel/fs/nls/nls_iso8859-3.ko:
+kernel/fs/nls/nls_iso8859-4.ko:
+kernel/fs/nls/nls_iso8859-5.ko:
+kernel/fs/nls/nls_iso8859-6.ko:
+kernel/fs/nls/nls_iso8859-7.ko:
+kernel/fs/nls/nls_cp1255.ko:
+kernel/fs/nls/nls_iso8859-9.ko:
+kernel/fs/nls/nls_iso8859-13.ko:
+kernel/fs/nls/nls_iso8859-14.ko:
+kernel/fs/nls/nls_iso8859-15.ko:
+kernel/fs/nls/nls_koi8-r.ko:
+kernel/fs/nls/nls_koi8-u.ko:
+kernel/fs/nls/nls_koi8-ru.ko:
+kernel/fs/nls/nls_utf8.ko:
+kernel/fs/binfmt_misc.ko:
+kernel/fs/configfs/configfs.ko:
+kernel/fs/ext2/ext2.ko:
+kernel/crypto/seqiv.ko:
+kernel/crypto/xcbc.ko:
+kernel/crypto/crypto_null.ko:
+kernel/crypto/md4.ko:
+kernel/crypto/rmd128.ko:
+kernel/crypto/rmd160.ko:
+kernel/crypto/rmd256.ko:
+kernel/crypto/rmd320.ko:
+kernel/crypto/sha1_generic.ko:
+kernel/crypto/sha256_generic.ko:
+kernel/crypto/sha512_generic.ko:
+kernel/crypto/wp512.ko:
+kernel/crypto/tgr192.ko:
+kernel/crypto/gf128mul.ko:
+kernel/crypto/pcbc.ko:
+kernel/crypto/cts.ko:
+kernel/crypto/lrw.ko: kernel/crypto/gf128mul.ko
+kernel/crypto/xts.ko: kernel/crypto/gf128mul.ko
+kernel/crypto/ctr.ko:
+kernel/crypto/gcm.ko:
+kernel/crypto/ccm.ko:
+kernel/crypto/cryptd.ko:
+kernel/crypto/fcrypt.ko:
+kernel/crypto/blowfish_generic.ko: kernel/crypto/blowfish_common.ko
+kernel/crypto/blowfish_common.ko:
+kernel/crypto/twofish_generic.ko: kernel/crypto/twofish_common.ko
+kernel/crypto/twofish_common.ko:
+kernel/crypto/serpent_generic.ko:
+kernel/crypto/camellia_generic.ko:
+kernel/crypto/cast_common.ko:
+kernel/crypto/cast5_generic.ko: kernel/crypto/cast_common.ko
+kernel/crypto/cast6_generic.ko: kernel/crypto/cast_common.ko
+kernel/crypto/tea.ko:
+kernel/crypto/khazad.ko:
+kernel/crypto/anubis.ko:
+kernel/crypto/seed.ko:
+kernel/crypto/salsa20_generic.ko:
+kernel/crypto/deflate.ko:
+kernel/crypto/zlib.ko:
+kernel/crypto/crc32c.ko:
+kernel/crypto/authenc.ko:
+kernel/crypto/authencesn.ko:
+kernel/crypto/lzo.ko:
+kernel/crypto/ansi_cprng.ko:
+kernel/crypto/tcrypt.ko:
+kernel/crypto/ghash-generic.ko: kernel/crypto/gf128mul.ko
+kernel/drivers/block/loop.ko:
+kernel/drivers/block/pktcdvd.ko: kernel/drivers/cdrom/cdrom.ko
+kernel/drivers/block/nbd.ko:
+kernel/drivers/misc/tsl2550.ko:
+kernel/drivers/net/wireless/hostap/hostap.ko: kernel/net/wireless/lib80211.ko
+kernel/drivers/net/wireless/zd1211rw/zd1211rw.ko: kernel/net/mac80211/mac80211.ko kernel/net/wireless/cfg80211.ko
+kernel/drivers/net/wireless/libertas/libertas.ko: kernel/net/wireless/cfg80211.ko
+kernel/drivers/net/wireless/libertas/libertas_sdio.ko: kernel/drivers/net/wireless/libertas/libertas.ko kernel/net/wireless/cfg80211.ko
+kernel/drivers/net/tun.ko:
+kernel/drivers/net/ppp/ppp_generic.ko: kernel/drivers/net/slip/slhc.ko
+kernel/drivers/net/ppp/ppp_async.ko: kernel/lib/crc-ccitt.ko kernel/drivers/net/ppp/ppp_generic.ko kernel/drivers/net/slip/slhc.ko
+kernel/drivers/net/ppp/bsd_comp.ko: kernel/drivers/net/ppp/ppp_generic.ko kernel/drivers/net/slip/slhc.ko
+kernel/drivers/net/ppp/ppp_deflate.ko: kernel/drivers/net/ppp/ppp_generic.ko kernel/drivers/net/slip/slhc.ko
+kernel/drivers/net/ppp/ppp_mppe.ko: kernel/drivers/net/ppp/ppp_generic.ko kernel/drivers/net/slip/slhc.ko
+kernel/drivers/net/ppp/ppp_synctty.ko: kernel/drivers/net/ppp/ppp_generic.ko kernel/drivers/net/slip/slhc.ko
+kernel/drivers/net/slip/slhc.ko:
+kernel/drivers/cdrom/cdrom.ko:
+kernel/drivers/usb/storage/usb-storage.ko: kernel/drivers/scsi/scsi_mod.ko
+kernel/drivers/usb/storage/ums-alauda.ko: kernel/drivers/usb/storage/usb-storage.ko kernel/drivers/scsi/scsi_mod.ko
+kernel/drivers/usb/storage/ums-datafab.ko: kernel/drivers/usb/storage/usb-storage.ko kernel/drivers/scsi/scsi_mod.ko
+kernel/drivers/usb/storage/ums-isd200.ko: kernel/drivers/usb/storage/usb-storage.ko kernel/drivers/scsi/scsi_mod.ko
+kernel/drivers/usb/storage/ums-jumpshot.ko: kernel/drivers/usb/storage/usb-storage.ko kernel/drivers/scsi/scsi_mod.ko
+kernel/drivers/usb/storage/ums-sddr09.ko: kernel/drivers/usb/storage/usb-storage.ko kernel/drivers/scsi/scsi_mod.ko
+kernel/drivers/usb/storage/ums-sddr55.ko: kernel/drivers/usb/storage/usb-storage.ko kernel/drivers/scsi/scsi_mod.ko
+kernel/drivers/usb/storage/ums-usbat.ko: kernel/drivers/usb/storage/usb-storage.ko kernel/drivers/scsi/scsi_mod.ko
+kernel/drivers/usb/gadget/libcomposite.ko: kernel/fs/configfs/configfs.ko
+kernel/drivers/usb/gadget/usb_f_acm.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/fs/configfs/configfs.ko kernel/drivers/usb/gadget/u_serial.ko
+kernel/drivers/usb/gadget/usb_f_ss_lb.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/fs/configfs/configfs.ko
+kernel/drivers/usb/gadget/u_serial.ko:
+kernel/drivers/usb/gadget/usb_f_serial.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/fs/configfs/configfs.ko kernel/drivers/usb/gadget/u_serial.ko
+kernel/drivers/usb/gadget/usb_f_obex.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/fs/configfs/configfs.ko kernel/drivers/usb/gadget/u_serial.ko
+kernel/drivers/usb/gadget/g_zero.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/fs/configfs/configfs.ko
+kernel/drivers/usb/gadget/g_ether.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/fs/configfs/configfs.ko
+kernel/drivers/usb/gadget/gadgetfs.ko:
+kernel/drivers/usb/gadget/g_mass_storage.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/fs/configfs/configfs.ko
+kernel/drivers/usb/gadget/g_serial.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/fs/configfs/configfs.ko
+kernel/drivers/usb/gadget/g_cdc.ko: kernel/drivers/usb/gadget/libcomposite.ko kernel/fs/configfs/configfs.ko
+kernel/drivers/usb/class/cdc-acm.ko:
+kernel/drivers/usb/class/cdc-wdm.ko:
+kernel/drivers/usb/serial/usbserial.ko:
+kernel/drivers/usb/serial/cp210x.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/ftdi_sio.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/spcp8x5.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/input/evbug.ko:
+kernel/drivers/char/ipmi/ipmi_msghandler.ko:
+kernel/drivers/char/ipmi/ipmi_devintf.ko: kernel/drivers/char/ipmi/ipmi_msghandler.ko
+kernel/drivers/char/ipmi/ipmi_si.ko: kernel/drivers/char/ipmi/ipmi_msghandler.ko
+kernel/drivers/char/ipmi/ipmi_watchdog.ko: kernel/drivers/char/ipmi/ipmi_msghandler.ko
+kernel/drivers/char/ipmi/ipmi_poweroff.ko: kernel/drivers/char/ipmi/ipmi_msghandler.ko
+kernel/drivers/connector/cn.ko:
+kernel/drivers/scsi/scsi_mod.ko:
+kernel/drivers/scsi/sd_mod.ko: kernel/drivers/scsi/scsi_mod.ko
+kernel/drivers/scsi/sg.ko: kernel/drivers/scsi/scsi_mod.ko
+kernel/drivers/thermal/thermal_sys.ko:
+kernel/drivers/bluetooth/hci_vhci.ko: kernel/net/bluetooth/bluetooth.ko kernel/lib/crc16.ko
+kernel/drivers/bluetooth/hci_uart.ko: kernel/net/bluetooth/bluetooth.ko kernel/lib/crc16.ko
+kernel/drivers/bluetooth/bcm203x.ko: kernel/net/bluetooth/bluetooth.ko kernel/lib/crc16.ko
+kernel/drivers/bluetooth/bpa10x.ko: kernel/net/bluetooth/bluetooth.ko kernel/lib/crc16.ko
+kernel/drivers/bluetooth/bfusb.ko: kernel/net/bluetooth/bluetooth.ko kernel/lib/crc16.ko
+kernel/drivers/bluetooth/btusb.ko: kernel/net/bluetooth/bluetooth.ko kernel/lib/crc16.ko
+kernel/drivers/bluetooth/btsdio.ko: kernel/net/bluetooth/bluetooth.ko kernel/lib/crc16.ko
+kernel/sound/core/oss/snd-mixer-oss.ko:
+kernel/sound/core/oss/snd-pcm-oss.ko: kernel/sound/core/oss/snd-mixer-oss.ko
+kernel/sound/core/snd-hwdep.ko:
+kernel/sound/core/snd-rawmidi.ko: kernel/sound/core/seq/snd-seq-device.ko
+kernel/sound/core/seq/snd-seq.ko: kernel/sound/core/seq/snd-seq-device.ko
+kernel/sound/core/seq/snd-seq-device.ko:
+kernel/sound/core/seq/snd-seq-midi-event.ko: kernel/sound/core/seq/snd-seq.ko kernel/sound/core/seq/snd-seq-device.ko
+kernel/sound/core/seq/oss/snd-seq-oss.ko: kernel/sound/core/seq/snd-seq-midi-event.ko kernel/sound/core/seq/snd-seq.ko kernel/sound/core/seq/snd-seq-device.ko
+kernel/sound/core/seq/snd-seq-dummy.ko: kernel/sound/core/seq/snd-seq.ko kernel/sound/core/seq/snd-seq-device.ko
+kernel/sound/core/seq/snd-seq-midi.ko: kernel/sound/core/snd-rawmidi.ko kernel/sound/core/seq/snd-seq-midi-event.ko kernel/sound/core/seq/snd-seq.ko kernel/sound/core/seq/snd-seq-device.ko
+kernel/sound/usb/caiaq/snd-usb-caiaq.ko: kernel/sound/core/snd-rawmidi.ko kernel/sound/core/seq/snd-seq-device.ko
+kernel/sound/usb/snd-usb-audio.ko: kernel/sound/usb/snd-usbmidi-lib.ko kernel/sound/core/snd-hwdep.ko kernel/sound/core/snd-rawmidi.ko kernel/sound/core/seq/snd-seq-device.ko
+kernel/sound/usb/snd-usbmidi-lib.ko: kernel/sound/core/snd-rawmidi.ko kernel/sound/core/seq/snd-seq-device.ko
+kernel/net/core/pktgen.ko:
+kernel/net/802/p8022.ko: kernel/net/llc/llc.ko
+kernel/net/802/psnap.ko: kernel/net/llc/llc.ko
+kernel/net/802/stp.ko: kernel/net/llc/llc.ko
+kernel/net/802/garp.ko: kernel/net/802/stp.ko kernel/net/llc/llc.ko
+kernel/net/ipv4/inet_diag.ko:
+kernel/net/ipv4/tcp_diag.ko: kernel/net/ipv4/inet_diag.ko
+kernel/net/xfrm/xfrm_algo.ko:
+kernel/net/xfrm/xfrm_user.ko: kernel/net/xfrm/xfrm_algo.ko
+kernel/net/8021q/8021q.ko: kernel/net/802/garp.ko kernel/net/802/stp.ko kernel/net/llc/llc.ko
+kernel/net/wireless/cfg80211.ko:
+kernel/net/wireless/lib80211.ko:
+kernel/net/wireless/lib80211_crypt_wep.ko: kernel/net/wireless/lib80211.ko
+kernel/net/wireless/lib80211_crypt_ccmp.ko: kernel/net/wireless/lib80211.ko
+kernel/net/wireless/lib80211_crypt_tkip.ko: kernel/net/wireless/lib80211.ko
+kernel/net/llc/llc.ko:
+kernel/net/key/af_key.ko: kernel/net/xfrm/xfrm_algo.ko
+kernel/net/bridge/bridge.ko: kernel/net/802/stp.ko kernel/net/llc/llc.ko
+kernel/net/bluetooth/bluetooth.ko: kernel/lib/crc16.ko
+kernel/net/bluetooth/rfcomm/rfcomm.ko: kernel/net/bluetooth/bluetooth.ko kernel/lib/crc16.ko
+kernel/net/bluetooth/bnep/bnep.ko: kernel/net/bluetooth/bluetooth.ko kernel/lib/crc16.ko
+kernel/net/bluetooth/hidp/hidp.ko: kernel/net/bluetooth/bluetooth.ko kernel/lib/crc16.ko
+kernel/net/mac80211/mac80211.ko: kernel/net/wireless/cfg80211.ko
+kernel/lib/crc-ccitt.ko:
+kernel/lib/crc16.ko:
+kernel/lib/libcrc32c.ko:
