@@ -1,1 +1,1 @@
-cmd_archival/lib.a := rm -f archival/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-linux-ar  rcs archival/lib.a archival/ar.o archival/bbunzip.o archival/cpio.o archival/gzip.o archival/tar.o archival/unzip.o
+cmd_archival/lib.a := rm -f archival/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-ar  rcs archival/lib.a archival/ar.o archival/bbunzip.o archival/cpio.o archival/gzip.o archival/tar.o archival/unzip.o

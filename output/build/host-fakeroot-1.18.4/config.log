@@ -39,6 +39,7 @@ PATH: /sbin
 PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
+PATH: /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/
 
 
 ## ----------- ##
@@ -1852,7 +1853,7 @@ configure: failed program was:
 configure:12563: result: no
 configure:12563: checking for fgetattrlist
 configure:12563: /usr/bin/gcc -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c -ldl  >&5
-/tmp/cckR7fBN.o: In function `main':
+/tmp/ccsb4MTp.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `fgetattrlist'
 collect2: error: ld returned 1 exit status
 configure:12563: $? = 1

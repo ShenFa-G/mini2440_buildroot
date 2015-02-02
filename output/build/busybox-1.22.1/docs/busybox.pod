@@ -1052,8 +1052,6 @@ ifconfig [-a] interface [address]
 
 Configure a network interface
 
-	[add ADDRESS[/PREFIXLEN]]
-	[del ADDRESS[/PREFIXLEN]]
 	[[-]broadcast [ADDRESS]] [[-]pointopoint [ADDRESS]]
 	[netmask ADDRESS] [dstaddr ADDRESS]
 	[outfill NN] [keepalive NN]
@@ -1897,7 +1895,7 @@ Edit kernel routing tables
 
 	-n	Don't resolve names
 	-e	Display other/more information
-	-A inet{6}	Select address family
+	-A inet	Select address family
 
 =item B<run-parts>
 

@@ -39,6 +39,7 @@ PATH: /sbin
 PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
+PATH: /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/
 
 
 ## ----------- ##
@@ -63,7 +64,7 @@ configure:2310: result: x86_64-unknown-linux-gnu
 configure:2337: autobuild project... GNU Autoconf
 configure:2343: autobuild revision... 2.69
 configure:2348: autobuild hostname... ssbai
-configure:2359: autobuild timestamp... 20150116T023606Z
+configure:2359: autobuild timestamp... 20150202T083633Z
 configure:2387: checking whether /bin/sh -n is known to work
 configure:2406: result: no
 configure:2410: checking for characters that cannot appear in file names

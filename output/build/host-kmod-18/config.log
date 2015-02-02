@@ -39,6 +39,7 @@ PATH: /sbin
 PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
+PATH: /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/
 
 
 ## ----------- ##
@@ -769,7 +770,7 @@ configure:13820: $? = 0
 configure:13820: result: yes
 configure:13820: checking for __secure_getenv
 configure:13820: /usr/bin/gcc -std=gnu99 -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c  >&5
-/tmp/ccG9CO04.o: In function `main':
+/tmp/ccMXJMcM.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `__secure_getenv'
 collect2: error: ld returned 1 exit status
 configure:13820: $? = 1
@@ -847,7 +848,7 @@ configure:13820: $? = 0
 configure:13820: result: yes
 configure:13820: checking for finit_module
 configure:13820: /usr/bin/gcc -std=gnu99 -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c  >&5
-/tmp/ccGcHfVd.o: In function `main':
+/tmp/cc1X7guT.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `finit_module'
 collect2: error: ld returned 1 exit status
 configure:13820: $? = 1

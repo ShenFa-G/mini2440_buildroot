@@ -478,11 +478,11 @@ distclean-generic:
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
-distclean-local:
-uninstall-local:
 maintainer-clean-local:
 install-data-local:
 clean-local:
+uninstall-local:
+distclean-local:
 clean: clean-am
 
 clean-am: clean-generic clean-libtool clean-local mostlyclean-am

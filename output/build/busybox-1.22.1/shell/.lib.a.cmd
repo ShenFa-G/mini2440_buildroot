@@ -1,1 +1,1 @@
-cmd_shell/lib.a := rm -f shell/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-linux-ar  rcs shell/lib.a shell/ash.o shell/ash_ptr_hack.o shell/math.o shell/random.o shell/shell_common.o
+cmd_shell/lib.a := rm -f shell/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-ar  rcs shell/lib.a shell/ash.o shell/ash_ptr_hack.o shell/math.o shell/random.o shell/shell_common.o

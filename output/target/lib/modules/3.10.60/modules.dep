@@ -131,6 +131,7 @@ kernel/drivers/usb/serial/cp210x.ko: kernel/drivers/usb/serial/usbserial.ko
 kernel/drivers/usb/serial/ftdi_sio.ko: kernel/drivers/usb/serial/usbserial.ko
 kernel/drivers/usb/serial/spcp8x5.ko: kernel/drivers/usb/serial/usbserial.ko
 kernel/drivers/input/evbug.ko:
+kernel/drivers/ldr/scull/scull.ko:
 kernel/drivers/char/ipmi/ipmi_msghandler.ko:
 kernel/drivers/char/ipmi/ipmi_devintf.ko: kernel/drivers/char/ipmi/ipmi_msghandler.ko
 kernel/drivers/char/ipmi/ipmi_si.ko: kernel/drivers/char/ipmi/ipmi_msghandler.ko

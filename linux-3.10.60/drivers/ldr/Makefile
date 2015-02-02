@@ -1,0 +1,1 @@
+obj-$(CONFIG_LDR_SCULL) +=scull/

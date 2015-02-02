@@ -1,1 +1,1 @@
-cmd_editors/lib.a := rm -f editors/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-linux-ar  rcs editors/lib.a editors/awk.o editors/cmp.o editors/diff.o editors/patch.o editors/sed.o editors/vi.o
+cmd_editors/lib.a := rm -f editors/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-ar  rcs editors/lib.a editors/awk.o editors/cmp.o editors/diff.o editors/patch.o editors/sed.o editors/vi.o

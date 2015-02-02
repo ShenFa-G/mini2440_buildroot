@@ -1,60 +1,60 @@
 --------------------
 ./configure --prefix=/home/ssbai/mini2440_buildroot/output/host/usr --sysconfdir=/home/ssbai/mini2440_buildroot/output/host/etc
-Fri Jan 16 10:55:32 CST 2015
+Mon Feb  2 16:49:12 CST 2015
 ignored option: --sysconfdir
-=== ztest21390.c ===
+=== ztest17955.c ===
 extern int getchar();
 int hello() {return getchar();}
 ===
-/usr/bin/gcc -c ztest21390.c
+/usr/bin/gcc -c ztest17955.c
 ... using gcc
 
 Checking for obsessive-compulsive compiler options...
-=== ztest21390.c ===
+=== ztest17955.c ===
 int foo() { return 0; }
 ===
-/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include ztest21390.c
+/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include ztest17955.c
 
 Checking for shared library support...
-=== ztest21390.c ===
+=== ztest17955.c ===
 extern int getchar();
 int hello() {return getchar();}
 ===
-/usr/bin/gcc -w -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -fPIC ztest21390.c
-/usr/bin/gcc -shared -Wl,-soname,libz.so.1,--version-script,zlib.map -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -fPIC -o ztest21390.so ztest21390.o
+/usr/bin/gcc -w -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -fPIC ztest17955.c
+/usr/bin/gcc -shared -Wl,-soname,libz.so.1,--version-script,zlib.map -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -fPIC -o ztest17955.so ztest17955.o
 Building shared library libz.so.1.2.8 with /usr/bin/gcc.
 
-=== ztest21390.c ===
+=== ztest17955.c ===
 #include <sys/types.h>
 off64_t dummy = 0;
 ===
-/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest21390.c
+/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest17955.c
 Checking for off64_t... Yes.
 Checking for fseeko... Yes.
 
-=== ztest21390.c ===
+=== ztest17955.c ===
 #include <string.h>
 #include <errno.h>
 int main() { return strlen(strerror(errno)); }
 ===
-/usr/bin/gcc -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 -o ztest21390 ztest21390.c
+/usr/bin/gcc -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 -o ztest17955 ztest17955.c
 Checking for strerror... Yes.
 
-=== ztest21390.c ===
+=== ztest17955.c ===
 #include <unistd.h>
 int main() { return 0; }
 ===
-/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest21390.c
+/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest17955.c
 Checking for unistd.h... Yes.
 
-=== ztest21390.c ===
+=== ztest17955.c ===
 #include <stdarg.h>
 int main() { return 0; }
 ===
-/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest21390.c
+/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest17955.c
 Checking for stdarg.h... Yes.
 
-=== ztest21390.c ===
+=== ztest17955.c ===
 #include <stdio.h>
 #include <stdarg.h>
 #include "zconf.h"
@@ -66,10 +66,10 @@ int main()
   return 0;
 }
 ===
-/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest21390.c
+/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest17955.c
 Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
 
-=== ztest21390.c ===
+=== ztest17955.c ===
 #include <stdio.h>
 #include <stdarg.h>
 int mytest(const char *fmt, ...)
@@ -86,10 +86,10 @@ int main()
   return (mytest("Hello%d\n", 1));
 }
 ===
-/usr/bin/gcc -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 -o ztest21390 ztest21390.c
+/usr/bin/gcc -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 -o ztest17955 ztest17955.c
 Checking for vsnprintf() in stdio.h... Yes.
 
-=== ztest21390.c ===
+=== ztest17955.c ===
 #include <stdio.h>
 #include <stdarg.h>
 int mytest(const char *fmt, ...)
@@ -107,10 +107,10 @@ int main()
   return (mytest("Hello%d\n", 1));
 }
 ===
-/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest21390.c
+/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest17955.c
 Checking for return value of vsnprintf()... Yes.
 
-=== ztest21390.c ===
+=== ztest17955.c ===
 #define ZLIB_INTERNAL __attribute__((visibility ("hidden")))
 int ZLIB_INTERNAL foo;
 int main()
@@ -118,7 +118,7 @@ int main()
   return 0;
 }
 ===
-/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest21390.c
+/usr/bin/gcc -c -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -D_LARGEFILE64_SOURCE=1 ztest17955.c
 Checking for attribute(visibility) support... Yes.
 
 ALL = static shared all64

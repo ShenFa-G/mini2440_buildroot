@@ -39,6 +39,7 @@ PATH: /sbin
 PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
+PATH: /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/
 
 
 ## ----------- ##
@@ -537,7 +538,7 @@ configure:5479: $? = 0
 configure:5488: result: yes
 configure:5502: checking for lzo1x_decompress_asm_fast in -llzo2
 configure:5527: /usr/bin/gcc -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c -llzo2  -llzo2  >&5
-/tmp/ccg4vqlT.o: In function `main':
+/tmp/ccSczeil.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `lzo1x_decompress_asm_fast'
 collect2: error: ld returned 1 exit status
 configure:5527: $? = 1
@@ -613,7 +614,7 @@ configure: failed program was:
 configure:5536: result: no
 configure:5544: checking for _lzo1x_decompress_asm_fast in -llzo2
 configure:5569: /usr/bin/gcc -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c -llzo2  -llzo2  >&5
-/tmp/ccRa0BJV.o: In function `main':
+/tmp/ccPdYXer.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `_lzo1x_decompress_asm_fast'
 collect2: error: ld returned 1 exit status
 configure:5569: $? = 1
@@ -2607,7 +2608,7 @@ configure:6535: /usr/bin/gcc -o conftest -O2 -I/home/ssbai/mini2440_buildroot/ou
 conftest.c:104:6: warning: conflicting types for built-in function 'alloca' [enabled by default]
  char alloca ();
       ^
-/tmp/ccMz3ObC.o: In function `main':
+/tmp/ccdCnsoc.o: In function `main':
 conftest.c:(.text.startup+0x18): undefined reference to `alloca'
 collect2: error: ld returned 1 exit status
 configure:6535: $? = 1
@@ -2920,7 +2921,7 @@ configure:6535: $? = 0
 configure:6535: result: yes
 configure:6535: checking for stricmp
 configure:6535: /usr/bin/gcc -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c -llzo2  >&5
-/tmp/ccI7Ppzw.o: In function `main':
+/tmp/cc2i3FJU.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `stricmp'
 collect2: error: ld returned 1 exit status
 configure:6535: $? = 1
@@ -3093,7 +3094,7 @@ configure:6535: $? = 0
 configure:6535: result: yes
 configure:6535: checking for strnicmp
 configure:6535: /usr/bin/gcc -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c -llzo2  >&5
-/tmp/ccAn0AZB.o: In function `main':
+/tmp/ccq85jz2.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `strnicmp'
 collect2: error: ld returned 1 exit status
 configure:6535: $? = 1

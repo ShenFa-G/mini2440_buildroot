@@ -950,8 +950,6 @@ COMMAND DESCRIPTIONS
 
         Configure a network interface
 
-                [add ADDRESS[/PREFIXLEN]]
-                [del ADDRESS[/PREFIXLEN]]
                 [[-]broadcast [ADDRESS]] [[-]pointopoint [ADDRESS]]
                 [netmask ADDRESS] [dstaddr ADDRESS]
                 [outfill NN] [keepalive NN]
@@ -1689,7 +1687,7 @@ COMMAND DESCRIPTIONS
 
                 -n      Don't resolve names
                 -e      Display other/more information
-                -A inet{6}      Select address family
+                -A inet Select address family
 
     run-parts
         run-parts [-a ARG]... [-u UMASK] [--reverse] [--test]

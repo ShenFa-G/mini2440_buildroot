@@ -1,0 +1,5 @@
+@set version-GCC 4.8.3
+@clear DEVELOPMENT
+@set srcdir /home/ssbai/mini2440_buildroot/output/build/host-gcc-final-4.8.3/build/gcc/../../gcc
+@set VERSION_PACKAGE (Buildroot 2014.11-gd947a6f-dirty) 
+@set BUGURL @uref{http://bugs.buildroot.net/}

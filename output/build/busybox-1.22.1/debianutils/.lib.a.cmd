@@ -1,1 +1,1 @@
-cmd_debianutils/lib.a := rm -f debianutils/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-linux-ar  rcs debianutils/lib.a debianutils/mktemp.o debianutils/pipe_progress.o debianutils/run_parts.o debianutils/start_stop_daemon.o debianutils/which.o
+cmd_debianutils/lib.a := rm -f debianutils/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-ar  rcs debianutils/lib.a debianutils/mktemp.o debianutils/pipe_progress.o debianutils/run_parts.o debianutils/start_stop_daemon.o debianutils/which.o

@@ -39,6 +39,7 @@ PATH: /sbin
 PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
+PATH: /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/
 
 
 ## ----------- ##

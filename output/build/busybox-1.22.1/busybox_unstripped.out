@@ -1,7 +1,7 @@
 Output of:
-/home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-linux-gcc -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -Os -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wunused-function -Wunused-value -Wmissing-prototypes -Wmissing-declarations -Wno-format-security -Wdeclaration-after-statement -Wold-style-definition -fno-builtin-strlen -finline-limit=0 -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -static-libgcc -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -Os -o busybox_unstripped -Wl,--sort-common -Wl,--sort-section,alignment -Wl,--gc-sections -Wl,--start-group applets/built-in.o archival/lib.a archival/libarchive/lib.a console-tools/lib.a coreutils/lib.a coreutils/libcoreutils/lib.a debianutils/lib.a e2fsprogs/lib.a editors/lib.a findutils/lib.a init/lib.a libbb/lib.a libpwdgrp/lib.a loginutils/lib.a mailutils/lib.a miscutils/lib.a modutils/lib.a networking/lib.a networking/libiproute/lib.a networking/udhcp/lib.a printutils/lib.a procps/lib.a runit/lib.a selinux/lib.a shell/lib.a sysklogd/lib.a util-linux/lib.a util-linux/volume_id/lib.a archival/built-in.o archival/libarchive/built-in.o console-tools/built-in.o coreutils/built-in.o coreutils/libcoreutils/built-in.o debianutils/built-in.o e2fsprogs/built-in.o editors/built-in.o findutils/built-in.o init/built-in.o libbb/built-in.o libpwdgrp/built-in.o loginutils/built-in.o mailutils/built-in.o miscutils/built-in.o modutils/built-in.o networking/built-in.o networking/libiproute/built-in.o networking/udhcp/built-in.o printutils/built-in.o procps/built-in.o runit/built-in.o selinux/built-in.o shell/built-in.o sysklogd/built-in.o util-linux/built-in.o util-linux/volume_id/built-in.o -Wl,--end-group -Wl,--start-group -Wl,--end-group -Wl,--warn-common -Wl,-Map,busybox_unstripped.map -Wl,--verbose
+/home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-gcc -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -Os -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wunused-function -Wunused-value -Wmissing-prototypes -Wmissing-declarations -Wno-format-security -Wdeclaration-after-statement -Wold-style-definition -fno-builtin-strlen -finline-limit=0 -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -static-libgcc -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -Os -o busybox_unstripped -Wl,--sort-common -Wl,--sort-section,alignment -Wl,--gc-sections -Wl,--start-group applets/built-in.o archival/lib.a archival/libarchive/lib.a console-tools/lib.a coreutils/lib.a coreutils/libcoreutils/lib.a debianutils/lib.a e2fsprogs/lib.a editors/lib.a findutils/lib.a init/lib.a libbb/lib.a libpwdgrp/lib.a loginutils/lib.a mailutils/lib.a miscutils/lib.a modutils/lib.a networking/lib.a networking/libiproute/lib.a networking/udhcp/lib.a printutils/lib.a procps/lib.a runit/lib.a selinux/lib.a shell/lib.a sysklogd/lib.a util-linux/lib.a util-linux/volume_id/lib.a archival/built-in.o archival/libarchive/built-in.o console-tools/built-in.o coreutils/built-in.o coreutils/libcoreutils/built-in.o debianutils/built-in.o e2fsprogs/built-in.o editors/built-in.o findutils/built-in.o init/built-in.o libbb/built-in.o libpwdgrp/built-in.o loginutils/built-in.o mailutils/built-in.o miscutils/built-in.o modutils/built-in.o networking/built-in.o networking/libiproute/built-in.o networking/udhcp/built-in.o printutils/built-in.o procps/built-in.o runit/built-in.o selinux/built-in.o shell/built-in.o sysklogd/built-in.o util-linux/built-in.o util-linux/volume_id/built-in.o -Wl,--end-group -Wl,--start-group -Wl,--end-group -Wl,--warn-common -Wl,-Map,busybox_unstripped.map -Wl,--verbose
 ==========
-GNU ld (GNU Binutils) 2.20
+GNU ld (GNU Binutils) 2.22
   Supported emulations:
    armelf_linux_eabi
    armelfb_linux_eabi
@@ -82,6 +82,9 @@ SECTIONS
   .text           :
   {
     *(.text.unlikely .text.*_unlikely)
+    *(.text.exit .text.exit.*)
+    *(.text.startup .text.startup.*)
+    *(.text.hot .text.hot.*)
     *(.text .stub .text.* .gnu.linkonce.t.*)
     /* .gnu.warning sections are handled specially by elf32.em.  */
     *(.gnu.warning)
@@ -97,18 +100,23 @@ SECTIONS
   .rodata         : { *(.rodata .rodata.* .gnu.linkonce.r.*) }
   .rodata1        : { *(.rodata1) }
   .ARM.extab   : { *(.ARM.extab* .gnu.linkonce.armextab.*) }
-   __exidx_start = .;
+   PROVIDE_HIDDEN (__exidx_start = .);
   .ARM.exidx   : { *(.ARM.exidx* .gnu.linkonce.armexidx.*) }
-   __exidx_end = .;
+   PROVIDE_HIDDEN (__exidx_end = .);
   .eh_frame_hdr : { *(.eh_frame_hdr) }
   .eh_frame       : ONLY_IF_RO { KEEP (*(.eh_frame)) }
-  .gcc_except_table   : ONLY_IF_RO { *(.gcc_except_table .gcc_except_table.*) }
+  .gcc_except_table   : ONLY_IF_RO { *(.gcc_except_table
+  .gcc_except_table.*) }
+  /* These sections are generated by the Sun/Oracle C++ compiler.  */
+  .exception_ranges   : ONLY_IF_RO { *(.exception_ranges
+  .exception_ranges*) }
   /* Adjust the address for the data segment.  We want to adjust up to
      the same address within the page on the next page up.  */
   . = ALIGN (CONSTANT (MAXPAGESIZE)) - ((CONSTANT (MAXPAGESIZE) - .) & (CONSTANT (MAXPAGESIZE) - 1)); . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE));
   /* Exception handling  */
   .eh_frame       : ONLY_IF_RW { KEEP (*(.eh_frame)) }
   .gcc_except_table   : ONLY_IF_RW { *(.gcc_except_table .gcc_except_table.*) }
+  .exception_ranges   : ONLY_IF_RW { *(.exception_ranges .exception_ranges*) }
   /* Thread Local Storage sections  */
   .tdata	  : { *(.tdata .tdata.* .gnu.linkonce.td.*) }
   .tbss		  : { *(.tbss .tbss.* .gnu.linkonce.tb.*) *(.tcommon) }
@@ -120,16 +128,16 @@ SECTIONS
   }
   .init_array     :
   {
-     PROVIDE_HIDDEN (__init_array_start = .);
-     KEEP (*(SORT(.init_array.*)))
-     KEEP (*(.init_array))
-     PROVIDE_HIDDEN (__init_array_end = .);
+    PROVIDE_HIDDEN (__init_array_start = .);
+    KEEP (*(SORT(.init_array.*)))
+    KEEP (*(.init_array))
+    PROVIDE_HIDDEN (__init_array_end = .);
   }
   .fini_array     :
   {
     PROVIDE_HIDDEN (__fini_array_start = .);
-    KEEP (*(.fini_array))
     KEEP (*(SORT(.fini_array.*)))
+    KEEP (*(.fini_array))
     PROVIDE_HIDDEN (__fini_array_end = .);
   }
   .ctors          :
@@ -237,12 +245,12 @@ SECTIONS
 
 
 ==================================================
-attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/crt1.o succeeded
-/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/crt1.o
-attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/crti.o succeeded
-/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/crti.o
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/crtbegin.o succeeded
-/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/crtbegin.o
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/crt1.o succeeded
+/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/crt1.o
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/crti.o succeeded
+/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/crtbegin.o succeeded
+/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/crtbegin.o
 attempt to open applets/built-in.o succeeded
 applets/built-in.o
 attempt to open archival/lib.a succeeded
@@ -663,64 +671,52 @@ attempt to open util-linux/volume_id/built-in.o succeeded
 (libbb/lib.a)herror_msg.o
 (libbb/lib.a)perror_nomsg.o
 (libpwdgrp/lib.a)uidgid_get.o
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.so failed
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a succeeded
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_udivsi3.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_divsi3.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_lshrdi3.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_ashldi3.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_arm_addsubdf3.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_arm_muldivdf3.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_arm_cmpdf2.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_arm_fixdfsi.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_arm_fixunsdfsi.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_arm_addsubsf3.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_arm_muldivsf3.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_aeabi_ldivmod.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_aeabi_uldivmod.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_dvmd_lnx.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_fixdfdi.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_fixunsdfdi.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)bpabi.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_divdi3.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_udivdi3.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a)_clzsi2.o
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc_eh.so failed
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc_eh.a succeeded
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc_eh.a)unwind-arm.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc_eh.a)libunwind.o
-(/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc_eh.a)pr-support.o
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libc.so failed
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libc.a failed
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/libc.so failed
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/libc.a failed
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/lib/libc.so failed
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/../../../../arm-none-linux-gnueabi/lib/libc.a failed
-attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/lib/libc.so failed
-attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/lib/libc.a failed
-attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/libc.so succeeded
-opened script file /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/libc.so
-opened script file /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/libc.so
-attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/lib/libc.so.6 succeeded
-/lib/libc.so.6 (/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/lib/libc.so.6)
-attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/libc_nonshared.a succeeded
-(/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/libc_nonshared.a)elf-init.oS
-(/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/libc_nonshared.a)atexit.oS
-(/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/libc_nonshared.a)stat64.oS
-(/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/libc_nonshared.a)fstat64.oS
-(/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/libc_nonshared.a)lstat64.oS
-(/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/libc_nonshared.a)mknod.oS
-attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/lib/ld-linux.so.3 succeeded
-/lib/ld-linux.so.3 (/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/lib/ld-linux.so.3)
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.so failed
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a succeeded
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc_eh.so failed
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc_eh.a succeeded
-attempt to open /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/crtend.o succeeded
-/home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.3/crtend.o
-attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/crtn.o succeeded
-/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/usr/lib/crtn.o
-ld-linux.so.3 needed by /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/lib/libc.so.6
-found ld-linux.so.3 at /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-gnueabi/sysroot/lib/ld-linux.so.3debianutils/lib.a(mktemp.o): In function `mktemp_main':
-mktemp.c:(.text.mktemp_main+0x98): warning: the use of `mktemp' is dangerous, better use `mkstemp'
-
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.so failed
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a succeeded
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_udivsi3.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_divsi3.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_lshrdi3.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_ashldi3.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_arm_addsubdf3.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_arm_muldivdf3.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_arm_cmpdf2.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_arm_fixdfsi.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_arm_fixunsdfsi.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_arm_addsubsf3.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_arm_muldivsf3.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_aeabi_ldivmod.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_aeabi_uldivmod.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_dvmd_lnx.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_fixdfdi.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_fixunsdfdi.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)bpabi.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_divdi3.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_udivdi3.o
+(/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a)_clzsi2.o
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc_eh.so failed
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc_eh.a succeeded
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libc.so failed
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libc.a failed
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/../../../../arm-buildroot-linux-uclibcgnueabi/lib/libc.so failed
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/../../../../arm-buildroot-linux-uclibcgnueabi/lib/libc.a failed
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/lib/libc.so failed
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/lib/libc.a failed
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/libc.so succeeded
+opened script file /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/libc.so
+opened script file /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/libc.so
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/lib/libc.so.0 succeeded
+/lib/libc.so.0 (/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/lib/libc.so.0)
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/uclibc_nonshared.a succeeded
+(/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/uclibc_nonshared.a)atexit.os
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/lib/ld-uClibc.so.0 succeeded
+/lib/ld-uClibc.so.0 (/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/lib/ld-uClibc.so.0)
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.so failed
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc.a succeeded
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc_eh.so failed
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/libgcc_eh.a succeeded
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/crtend.o succeeded
+/home/ssbai/mini2440_buildroot/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabi/4.8.3/crtend.o
+attempt to open /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o succeeded
+/home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
+ld-uClibc.so.0 needed by /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/lib/libc.so.0
+found ld-uClibc.so.0 at /home/ssbai/mini2440_buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabi/sysroot/lib/ld-uClibc.so.0

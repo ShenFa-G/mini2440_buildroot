@@ -39,6 +39,7 @@ PATH: /sbin
 PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
+PATH: /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/
 
 
 ## ----------- ##
@@ -507,7 +508,7 @@ configure:6760: result: -std=gnu99
 configure:6832: autobuild project... GNU M4
 configure:6838: autobuild revision... 1.4.17
 configure:6843: autobuild hostname... ssbai
-configure:6854: autobuild timestamp... 20150116T023537Z
+configure:6854: autobuild timestamp... 20150202T071118Z
 configure:7865: checking for unsigned long long int
 configure:7913: result: yes
 configure:7923: checking for long long int
@@ -641,7 +642,7 @@ configure:8428: $? = 0
 configure:8428: result: yes
 configure:8428: checking for _set_invalid_parameter_handler
 configure:8428: /usr/bin/gcc -std=gnu99 -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c  >&5
-/tmp/cczuOFkK.o: In function `main':
+/tmp/ccVoLk0A.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `_set_invalid_parameter_handler'
 collect2: error: ld returned 1 exit status
 configure:8428: $? = 1
@@ -742,7 +743,7 @@ configure:8428: $? = 0
 configure:8428: result: yes
 configure:8428: checking for fpurge
 configure:8428: /usr/bin/gcc -std=gnu99 -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c  >&5
-/tmp/cc8YADFX.o: In function `main':
+/tmp/ccbwypeQ.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `fpurge'
 collect2: error: ld returned 1 exit status
 configure:8428: $? = 1
@@ -835,7 +836,7 @@ configure:8428: $? = 0
 configure:8428: result: yes
 configure:8428: checking for __freadahead
 configure:8428: /usr/bin/gcc -std=gnu99 -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c  >&5
-/tmp/ccuRNo04.o: In function `main':
+/tmp/ccbQvWbX.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `__freadahead'
 collect2: error: ld returned 1 exit status
 configure:8428: $? = 1
@@ -1018,7 +1019,7 @@ configure:8428: $? = 0
 configure:8428: result: yes
 configure:8428: checking for vasnprintf
 configure:8428: /usr/bin/gcc -std=gnu99 -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c  >&5
-/tmp/ccHVqg2d.o: In function `main':
+/tmp/ccO7HxxZ.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `vasnprintf'
 collect2: error: ld returned 1 exit status
 configure:8428: $? = 1
@@ -4513,7 +4514,7 @@ configure:19099: /usr/bin/gcc -std=gnu99 -o conftest -O2 -I/home/ssbai/mini2440_
 configure:19099: $? = 0
 configure:19099: ./conftest
 *** %n in writable segment detected ***
-./configure: line 2770: 28117 Aborted                 (core dumped) ./conftest$ac_exeext
+./configure: line 2770: 32247 Aborted                 (core dumped) ./conftest$ac_exeext
 configure:19099: $? = 134
 configure: program exited with status 134
 configure: failed program was:
@@ -5873,7 +5874,7 @@ configure:22500: checking whether fflush works on input streams
 configure:22574: result: no
 configure:22607: checking for _fseeki64
 configure:22607: /usr/bin/gcc -std=gnu99 -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c  >&5
-/tmp/cclP0pt5.o: In function `main':
+/tmp/ccy90hQF.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `_fseeki64'
 collect2: error: ld returned 1 exit status
 configure:22607: $? = 1

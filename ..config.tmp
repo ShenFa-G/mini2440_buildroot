@@ -1435,7 +1435,7 @@ endif
 ifneq "$(HOSTARCH)" "x86_64"
 /home/ssbai/mini2440_buildroot/output/build/buildroot-config/auto.conf: FORCE
 endif
-ifneq "$(BR2_VERSION_FULL)" "2014.11"
+ifneq "$(BR2_VERSION_FULL)" "2014.11-gd947a6f-dirty"
 /home/ssbai/mini2440_buildroot/output/build/buildroot-config/auto.conf: FORCE
 endif
 

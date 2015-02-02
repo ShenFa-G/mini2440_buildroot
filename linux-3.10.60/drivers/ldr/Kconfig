@@ -1,0 +1,6 @@
+menu "the linux device driver samples"
+
+config LDR_SCULL
+	tristate "scull driver samples"
+
+endmenu

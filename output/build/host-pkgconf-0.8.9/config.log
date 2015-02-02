@@ -39,6 +39,7 @@ PATH: /sbin
 PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
+PATH: /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/
 
 
 ## ----------- ##
@@ -108,7 +109,7 @@ configure:2670: $? = 0
 configure:2683: result: none needed
 configure:2707: checking for strlcpy
 configure:2707: /usr/bin/gcc -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c  >&5
-/tmp/cc8CjOoz.o: In function `main':
+/tmp/cc3fXm90.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `strlcpy'
 collect2: error: ld returned 1 exit status
 configure:2707: $? = 1
@@ -162,7 +163,7 @@ configure: failed program was:
 configure:2707: result: no
 configure:2707: checking for strlcat
 configure:2707: /usr/bin/gcc -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c  >&5
-/tmp/ccHeRFSE.o: In function `main':
+/tmp/ccoaNFj4.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `strlcat'
 collect2: error: ld returned 1 exit status
 configure:2707: $? = 1

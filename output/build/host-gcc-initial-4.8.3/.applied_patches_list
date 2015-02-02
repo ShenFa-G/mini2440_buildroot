@@ -1,0 +1,9 @@
+100-uclibc-conf.patch
+301-missing-execinfo_h.patch
+305-libmudflap-susv3-legacy.patch
+810-arm-softfloat-libgcc.patch
+830-arm_unbreak_armv4t.patch
+841-PR57717-E500v2.patch
+842-PR60155.patch
+850-libstdcxx-uclibc-c99.patch
+900-musl-support.patch

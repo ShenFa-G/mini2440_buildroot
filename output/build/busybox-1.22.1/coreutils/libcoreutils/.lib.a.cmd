@@ -1,1 +1,1 @@
-cmd_coreutils/libcoreutils/lib.a := rm -f coreutils/libcoreutils/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-linux-ar  rcs coreutils/libcoreutils/lib.a coreutils/libcoreutils/cp_mv_stat.o coreutils/libcoreutils/getopt_mk_fifo_nod.o
+cmd_coreutils/libcoreutils/lib.a := rm -f coreutils/libcoreutils/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-ar  rcs coreutils/libcoreutils/lib.a coreutils/libcoreutils/cp_mv_stat.o coreutils/libcoreutils/getopt_mk_fifo_nod.o

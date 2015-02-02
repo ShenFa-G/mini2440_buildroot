@@ -39,6 +39,7 @@ PATH: /sbin
 PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
+PATH: /home/ssbai/mini2440_buildroot/FriendlyARM/toolschain/4.4.3/bin/
 
 
 ## ----------- ##
@@ -1569,7 +1570,7 @@ configure:13775: /usr/bin/gcc -o conftest -O2 -I/home/ssbai/mini2440_buildroot/o
 conftest.c:101:6: warning: conflicting types for built-in function 'alloca' [enabled by default]
  char alloca ();
       ^
-/tmp/ccAKj9pf.o: In function `main':
+/tmp/cc6I9Wyi.o: In function `main':
 conftest.c:(.text.startup+0x18): undefined reference to `alloca'
 collect2: error: ld returned 1 exit status
 configure:13775: $? = 1
@@ -1879,7 +1880,7 @@ configure:13775: $? = 0
 configure:13775: result: yes
 configure:13775: checking for stricmp
 configure:13775: /usr/bin/gcc -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c  >&5
-/tmp/ccWqWJNj.o: In function `main':
+/tmp/ccyI1QEm.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `stricmp'
 collect2: error: ld returned 1 exit status
 configure:13775: $? = 1
@@ -2049,7 +2050,7 @@ configure:13775: $? = 0
 configure:13775: result: yes
 configure:13775: checking for strnicmp
 configure:13775: /usr/bin/gcc -o conftest -O2 -I/home/ssbai/mini2440_buildroot/output/host/usr/include -I/home/ssbai/mini2440_buildroot/output/host/usr/include -L/home/ssbai/mini2440_buildroot/output/host/lib -L/home/ssbai/mini2440_buildroot/output/host/usr/lib -Wl,-rpath,/home/ssbai/mini2440_buildroot/output/host/usr/lib conftest.c  >&5
-/tmp/ccnvoRwz.o: In function `main':
+/tmp/ccQa6jVv.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `strnicmp'
 collect2: error: ld returned 1 exit status
 configure:13775: $? = 1

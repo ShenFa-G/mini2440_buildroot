@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "BUSYBOX 1"
-.TH BUSYBOX 1 "2015-01-16" "version 1.22.1" "busybox"
+.TH BUSYBOX 1 "2015-02-02" "version 1.22.1" "busybox"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -1221,9 +1221,7 @@ ifconfig [\-a] interface [address]
 .Sp
 Configure a network interface
 .Sp
-.Vb 10
-\&        [add ADDRESS[/PREFIXLEN]]
-\&        [del ADDRESS[/PREFIXLEN]]
+.Vb 8
 \&        [[\-]broadcast [ADDRESS]] [[\-]pointopoint [ADDRESS]]
 \&        [netmask ADDRESS] [dstaddr ADDRESS]
 \&        [outfill NN] [keepalive NN]
@@ -2086,7 +2084,7 @@ Edit kernel routing tables
 .Vb 3
 \&        \-n      Don\*(Aqt resolve names
 \&        \-e      Display other/more information
-\&        \-A inet{6}      Select address family
+\&        \-A inet Select address family
 .Ve
 .IP "\fBrun-parts\fR" 4
 .IX Item "run-parts"

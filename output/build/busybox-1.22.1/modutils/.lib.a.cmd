@@ -1,1 +1,1 @@
-cmd_modutils/lib.a := rm -f modutils/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-linux-ar  rcs modutils/lib.a modutils/insmod.o modutils/lsmod.o modutils/modprobe.o modutils/modutils.o modutils/rmmod.o
+cmd_modutils/lib.a := rm -f modutils/lib.a; /home/ssbai/mini2440_buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-ar  rcs modutils/lib.a modutils/insmod.o modutils/lsmod.o modutils/modprobe.o modutils/modutils.o modutils/rmmod.o
